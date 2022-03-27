@@ -20,6 +20,9 @@ app.use(cors({
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use('/v1', router)
+app.get('/', (req, res) => {
+    res.send("Thanh cong")
+})
 connect
 app.listen(port, () => {
     console.log("Server active");
